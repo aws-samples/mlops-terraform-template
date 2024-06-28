@@ -1,6 +1,6 @@
 locals {
   prefix = "mlops"
-  user_profile_names = ["user1", "user2"]
+  user_profile_names = ["data-scientist-1", "data-scientist-2"]
   domain_name = "${local.prefix}-studio-domain"
   kms_key_alias = "${local.prefix}-kms-key"
 }

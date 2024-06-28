@@ -7,12 +7,17 @@ Data Engineers, ML Engineers, DevOps Engineers, IT and business stakeholders nee
 model lifecycle and the underlying workflows need to be defined, as well as the responsibilities of the different personas
 in these areas. This collection of practices is called Machine Learning Operations (MLOps).
 
-This repository contains a set baseline infrastructure for an MLOps environment on AWS for a single AWS account at this moment.
+This repository contains a set baseline infrastructure for an MLOps environment on AWS for a single AWS account. 
 The infrastructure is defined with Terraform and is built around the Amazon SageMaker service.
 
 The 3 main components in the repository are:
 
 ### Component 1: ./mlops_infra:
+
+mlops_infra will deploy a data science exploration environment for your data scientists to explore and train their ML models inside
+a SageMaker studio environment. Please note that the networking created by mlops_infra is a starter example and that 
+you can also adapt the repository to import your existing VPCs created by your organization instead of creating its own VPCs. 
+The repository will also create example SageMaker users (Data Scientist 1 and Data Scientist 2) and associated roles and policies.
 
 This terraform project is used to bootstrap an account for ML and includes the following modules:
 - modules/networking: Deploy vpc, subnet & vpc endpoints for SageMaker
