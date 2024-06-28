@@ -2,8 +2,11 @@
 
 ## Summary
 
-This repository deploys the Amazon SageMaker Studio Project Templates into your account and makes them accessible via 
+This part of the repository deploys the Amazon SageMaker Studio Project Templates into your account and makes them accessible via 
 the Organizational Templates in SageMaker Studio. 
+
+You can deploy multiple SageMaker Project Templates into Service Catalog and use them interchangeably and choose from the different templates in SageMaker Studio
+based on your ML use case requirements.   
 
 ## Architecture overview
 
@@ -31,7 +34,9 @@ make apply
 
 ### Extending Templates
 
-The code that would be copied when you initialize a new SageMaker Project can be found in `terraform/templates`. When a new SageMaker project is initialized, the code from `terraform/templates` will be copied into new CodeCommit repositories and linked to the project. It is possible to modify these base templates to fit your organizational needs. 
+The code that would be copied when you initialize a new SageMaker Project can be found in `terraform/templates`. 
+When a new SageMaker project is initialized, the code from `terraform/templates` will be copied into new CodeCommit repositories 
+and linked to the project. It is possible to modify these base templates to fit your organizational needs. 
 
 It is also possible to add your own templates. If you add your own templates, ensure you configure them to be deployed in `terraform/main.tf`.
 

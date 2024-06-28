@@ -6,8 +6,11 @@ This repository is used to deploy the foundational infrastructure for MLOps on A
 
 - `networking`: Sets up basic VPC and Subnets and required VPC Endpoints for running SageMaker Studio in private subnets
 - `iam`: Sets up basic IAM roles and IAM policies
-- `kms`: Creates KMS key and policies
+- `kms`: Creates KMS key and policies for encryption
 - `sagemaker_studio`: Deploys and configures Amazon SageMaker Studio including automatically enabling Amazon SageMaker projects
+
+The SageMaker Studio users Data Scientist 1 & 2 provisioned in this repository have permissions via the provisioned IAM Roles/Policies 
+and can be modified according to your security needs. Permissions given include: Amazon SageMaker Full Access, CodeCommit, CodeBuild, CodePipeline, S3, EventBridge, KMS
 
 ## Architecture overview
 
